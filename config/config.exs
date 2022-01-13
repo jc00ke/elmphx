@@ -17,11 +17,8 @@ config :elmphx, ElmphxWeb.Endpoint,
 config :elm,
   version: "0.19.1",
   default: [
-    # args: ~w(
-    #         make
-    #         src/Main.elm
-    #         --output=../../priv/static/assets/elm.js
-    #       ),
+    src_files: "src/*.elm",
+    output: "../../priv/static/assets/elm.js",
     cd: Path.expand("../assets/elm", __DIR__)
   ]
 

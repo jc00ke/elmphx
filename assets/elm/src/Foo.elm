@@ -1,4 +1,4 @@
-module Main exposing (Msg(..), main, update, view)
+module Foo exposing (Msg(..), main, update, view)
 
 import Browser
 import Html exposing (Html, button, div, text)
@@ -25,7 +25,8 @@ update msg model =
 
 view model =
     div []
-        [ button [ onClick Decrement ] [ text "-" ]
+        [ div [] [ text "Foo" ]
+        , button [ onClick Decrement ] [ text "-" ]
         , div [] [ text (String.fromInt model) ]
         , button [ onClick Increment ] [ text "+" ]
         ]

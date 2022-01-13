@@ -17,13 +17,7 @@ config :elmphx, ElmphxWeb.Endpoint,
   watchers: [
     # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
     esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]},
-    elm: {Elm, :install_and_run, [:default, ~w(
-            --watch
-            make
-            /_
-            --debug
-            --output=../../priv/static/assets/elm.js
-    )]}
+    elm: {Elm, :install_and_run, [:default, [debug: true, watch: true]]}
   ]
 
 # ## SSL Support
